@@ -35,11 +35,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+  flex-wrap: wrap;
 }
 
 .card {
+  margin: 10px;
   background-color: white;
-  width: 240px;
+  width: 320px;
   border-radius: 16px;
   overflow: hidden;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -66,8 +68,8 @@ body {
 }
 
 .card-body-img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border: 5px solid white;
   border-radius: 50%;
   margin-top: calc(-100px - 5px);
@@ -86,9 +88,9 @@ body {
 
 .card-body-text {
   color: var(--dark-gray);
-  font-size: 0.5rem;
+  font-size: 1.5rem;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .card-footer {
@@ -103,6 +105,7 @@ body {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  font-size: 0.8rem;
 }
 
 .card-footer-social p {

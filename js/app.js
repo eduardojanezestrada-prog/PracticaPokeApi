@@ -3,8 +3,10 @@ function getRandomInt(min, max) {
 }
 
 function init(){
-    const aleatorio=getRandomInt(1,1026)
-    fetchData(aleatorio)
+    for(let i=0;i<6;i++){
+        const aleatorio=getRandomInt(1,1026)
+        fetchData(aleatorio)
+    }
 }
 
 async function fetchData(id) {
@@ -45,4 +47,8 @@ function pintarCard(poke){
 
     fragment.appendChild(clone)
     flex.appendChild(fragment)
+}
+
+function limpiar(){
+    
 }
