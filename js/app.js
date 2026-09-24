@@ -2,8 +2,6 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random()*(max-min))+min;
 }
 
-document.addEventListener('DOMContentLoaded', init);
-
 function init(){
     const aleatorio=getRandomInt(1,1026)
     fetchData(aleatorio)
@@ -39,13 +37,11 @@ function pintarCard(poke){
     }
     clone.querySelector('.card-body-text').textContent = type;
 
-    for(let i=0;
-    clone.querySelector('.card-body-text').textContent = poke.stats;
-    clone.querySelector('.card-body-text').textContent = type;
-    clone.querySelector('.card-body-text').textContent = type;
-    clone.querySelector('.card-body-text').textContent = type;
-    clone.querySelector('.card-body-text').textContent = type;
-    clone.querySelector('.card-body-text').textContent = type;
+    let x;
+    for(let i=0; i<6; i++){
+        x='.stat'+i;
+        clone.querySelector(x).textContent = poke.stats[i].base_stat;
+    }
 
     fragment.appendChild(clone)
     flex.appendChild(fragment)
