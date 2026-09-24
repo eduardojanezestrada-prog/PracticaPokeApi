@@ -3,8 +3,54 @@ function getRandomInt(min, max) {
 }
 
 function init(){
+    let gene=document.getElementById("gen").value;
+    let num1, num2;
+
+    switch (parseInt(gene)) {
+        case 1:
+            num1=1;
+            num2=152;
+            break;
+        case 2:
+            num1=1;
+            num2=152;
+            break;
+        case 3:
+            num1=1;
+            num2=152;
+            break;
+        case 4:
+            num1=1;
+            num2=152;
+            break;
+        case 5:
+            num1=1;
+            num2=152;
+            break;
+        case 6:
+            num1=1;
+            num2=152;
+            break;
+        case 7:
+            num1=1;
+            num2=152;
+            break;
+        case 8:
+            num1=1;
+            num2=152;
+            break;
+        case 9:
+            num1=1;
+            num2=152;
+            break;
+        default:
+            num1=1;
+            num2=1026;
+            break;
+    }
+
     for(let i=0;i<6;i++){
-        const aleatorio=getRandomInt(1,1026)
+        const aleatorio=getRandomInt(num1,num2)
         fetchData(aleatorio)
     }
 }
