@@ -12,46 +12,55 @@
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
-    <input type="text" id="gen" placeholder="Introduce una generación">
-    <button onclick="init()">Crear equipo</button>
-    <main class="flex">
-        <template id="template-card">
-            <article class="card">
-                <img src="./images/bg-pattern-card.jpg" alt="imagen header card" class="card-header">
-                <div class="card-body">
-                    <img class="card-body-img">
-                    <h1 class="card-body-title"></h1>
-                    <p class="card-body-text"></p>
+    <select id="gen" onchange="init()">
+        <option value="0">Elige una region</option>
+        <option value="1">Primera</option>
+        <option value="2">Segunda</option>
+        <option value="3">Tercera</option>
+        <option value="4">Cuarta</option>
+        <option value="5">Quinta</option>
+        <option value="6">Sexta</option>
+        <option value="7">Septima</option>
+        <option value="8">Octava</option>
+        <option value="9">Novena</option>
+    </select>
+    <main class="flex"></main>
+    <template id="template-card">
+        <article class="card">
+            <img src="./images/bg-pattern-card.jpg" alt="imagen header card" class="card-header">
+            <div class="card-body">
+                <img class="card-body-img">
+                <h1 class="card-body-title"></h1>
+                <p class="card-body-text"></p>
+            </div>
+            <div class="card-footer">
+                <div class="card-footer-social">
+                    <h3 class="stat0"></h3>
+                    <p>Hp</p>
                 </div>
-                <div class="card-footer">
-                    <div class="card-footer-social">
-                        <h3 class="stat0"></h3>
-                        <p>Hp</p>
-                    </div>
-                    <div class="card-footer-social">
-                        <h3 class="stat1"></h3>
-                        <p>Attack</p>
-                    </div>
-                    <div class="card-footer-social">
-                        <h3 class="stat2"></h3>
-                        <p>Defense</p>
-                    </div>
-                        <div class="card-footer-social">
-                        <h3 class="stat3"></h3>
-                        <p>S.Attack</p>
-                    </div>
-                    <div class="card-footer-social">
-                        <h3 class="stat4"></h3>
-                        <p>S.Defense</p>
-                    </div>
-                    <div class="card-footer-social">
-                        <h3 class="stat5"></h3>
-                        <p>Speed</p>
-                    </div>
+                <div class="card-footer-social">
+                    <h3 class="stat1"></h3>
+                    <p>Attack</p>
                 </div>
-            </article>
-        </template>
-    </main>
+                <div class="card-footer-social">
+                    <h3 class="stat2"></h3>
+                    <p>Defense</p>
+                </div>
+                    <div class="card-footer-social">
+                    <h3 class="stat3"></h3>
+                    <p>S.Attack</p>
+                </div>
+                <div class="card-footer-social">
+                    <h3 class="stat4"></h3>
+                    <p>S.Defense</p>
+                </div>
+                <div class="card-footer-social">
+                    <h3 class="stat5"></h3>
+                    <p>Speed</p>
+                </div>
+            </div>
+        </article>
+    </template>
     <script src="js/app.js"></script>
 </body>
 </html>

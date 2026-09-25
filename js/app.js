@@ -1,8 +1,7 @@
-function getRandomInt(min, max) {
-    return Math.floor(Math.random()*(max-min))+min;
-}
-
-function init(){
+async function init(){
+    let element=document.querySelector(".flex");
+    element.innerHTML="";
+    
     let gene=document.getElementById("gen").value;
     let num1, num2;
 
@@ -21,10 +20,10 @@ function init(){
             break;
         case 4:
             num1=387;
-            num2=495;
+            num2=494;
             break;
         case 5:
-            num1=495;
+            num1=494;
             num2=650;
             break;
         case 6:
@@ -49,23 +48,15 @@ function init(){
             break;
     }
 
-    let aleatorio=getRandomInt(num1,num2)
-    fetchData(aleatorio)  
-    let norepit=aleatorio;
-
-    for(let i=0;i<5;i++){
-        while(aleatorio==norepit){
-            aleatorio=getRandomInt(num1,num2);
-        }
-        fetchData(aleatorio)
-        norepit=aleatorio;
+    for(let i=num1;i<num2;i++){
+        await fetchData(i);
     }
 }
 
 async function fetchData(id) {
     try {
-        const res = await fetch ('https://pokeapi.co/api/v2/pokemon/'+id)
-        const data = await res.json()
+        const res = await fetch ('https://pokeapi.co/api/v2/pokemon/'+id);
+        const data = await res.json();
         pintarCard(data)
 
     } catch (error) {
@@ -100,8 +91,4 @@ function pintarCard(poke){
 
     fragment.appendChild(clone)
     flex.appendChild(fragment)
-}
-
-function limpiar(){
-    
 }
