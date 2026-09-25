@@ -12,18 +12,20 @@
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
-    <select id="gen" onchange="init()">
-        <option value="0">Elige una region</option>
-        <option value="1">Primera</option>
-        <option value="2">Segunda</option>
-        <option value="3">Tercera</option>
-        <option value="4">Cuarta</option>
-        <option value="5">Quinta</option>
-        <option value="6">Sexta</option>
-        <option value="7">Septima</option>
-        <option value="8">Octava</option>
-        <option value="9">Novena</option>
-    </select>
+    <div class="selector">
+        <select id="gen" onchange="init()">
+            <option value="0">Elige una region</option>
+            <option value="1">Primera</option>
+            <option value="2">Segunda</option>
+            <option value="3">Tercera</option>
+            <option value="4">Cuarta</option>
+            <option value="5">Quinta</option>
+            <option value="6">Sexta</option>
+            <option value="7">Septima</option>
+            <option value="8">Octava</option>
+            <option value="9">Novena</option>
+        </select>
+    </div>
     <main class="flex"></main>
     <template id="template-card">
         <article class="card">

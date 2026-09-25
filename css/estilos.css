@@ -18,10 +18,9 @@ html {
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
-  background-color: var(--dark-cyan);
-  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  background: url("../images/background.jpg");
+  background-size: contain;
+  background-attachment: fixed;
 }
 
 .flex {
@@ -111,4 +110,18 @@ body {
 .card-footer-social p {
   letter-spacing: 1px;
 }
+
+.selector {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#gen {
+  size: 200px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+}
+
 /*# sourceMappingURL=estilos.css.map */

@@ -81,14 +81,13 @@ function pintarCard(poke){
     if(poke.types.length == 1){
         type=poke.types[0].type.name;
     } else {
-        type=poke.types[0].type.name+"/"+poke.types[1].type.name;
+        type=`${poke.types[0].type.name}/${poke.types[1].type.name}`;
     }
     clone.querySelector('.card-body-text').textContent = type;
 
     let x;
     for(let i=0; i<6; i++){
-        x='.stat'+i;
-        clone.querySelector(x).textContent = poke.stats[i].base_stat;
+        clone.querySelector(`.stat${i}`).textContent = poke.stats[i].base_stat;
     }
 
     fragment.appendChild(clone)
