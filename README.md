@@ -6,7 +6,7 @@ Una aplicación web interactiva desarrollada para practicar la integración con 
 
 ## 🚀 Características
 
-- 🔍 **Búsqueda dinámica:** Permite buscar Pokémon por nombre o ID.
+- 🔍 **Búsqueda dinámica:** Permite buscar Pokémon por generación.
 - 📋 **Visualización de tarjetas:** Muestra información clave de cada Pokémon (imagen/sprite, tipos, estadísticas básicas, habilidades, peso y altura).
 - 🎨 **Diseño adaptable (Responsive):** Interfaz optimizada para dispositivos móviles, tablets y de escritorio.
 - ⚡ **Paginación / Carga asíncrona:** Navegación entre distintas páginas o lista de Pokémon utilizando peticiones asíncronas (`fetch` / `axios`).
